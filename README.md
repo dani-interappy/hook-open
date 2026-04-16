@@ -4,10 +4,6 @@ A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) hook that automa
 
 No extra tokens. No API calls. Just a local script that fires after each response.
 
-## Demo
-
-<!-- Record a short GIF: ask Claude something, it mentions a URL, Chrome opens it -->
-
 ## Setup (1 minute)
 
 ### 1. Copy the script
