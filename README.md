@@ -15,10 +15,25 @@ chmod +x ~/.claude/hooks/open_links.py
 
 ### 2. Add the hook to your settings
 
-Open `~/.claude/settings.json` and add the `Stop` hook:
+Open `~/.claude/settings.json` in any text editor:
+
+```bash
+open ~/.claude/settings.json
+```
+
+Add a `"hooks"` key at the top level of the JSON object. If your file currently looks like this:
 
 ```json
 {
+  "permissions": { ... }
+}
+```
+
+Add the hooks block so it looks like this:
+
+```json
+{
+  "permissions": { ... },
   "hooks": {
     "Stop": [
       {
@@ -34,7 +49,7 @@ Open `~/.claude/settings.json` and add the `Stop` hook:
 }
 ```
 
-If you already have a `hooks` section, just add the `Stop` entry alongside your existing hooks.
+If you already have a `"hooks"` key, add `"Stop"` as a new entry inside it.
 
 ### 3. Restart Claude Code
 
