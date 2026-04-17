@@ -4,12 +4,28 @@ A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) hook that automa
 
 No extra tokens. No API calls. Just a local script that fires after each response.
 
-## Setup (1 minute)
+## Install via Claude Code
 
-### 1. Copy the script
+Paste this into any Claude Code session:
+
+```
+Install this Claude Code hook for me: https://github.com/dani-interappy/hook-open
+
+1. Download https://raw.githubusercontent.com/dani-interappy/hook-open/main/open_links.py to ~/.claude/hooks/open_links.py
+2. chmod +x ~/.claude/hooks/open_links.py
+3. Add the Stop hook to ~/.claude/settings.json — merge it without touching any existing keys:
+   "hooks": { "Stop": [{ "hooks": [{ "type": "command", "command": "python3 ~/.claude/hooks/open_links.py" }] }] }
+4. Show me the hooks section of settings.json to confirm it looks right
+```
+
+Then restart Claude Code.
+
+## Manual setup
+
+### 1. Download the script
 
 ```bash
-cp open_links.py ~/.claude/hooks/open_links.py
+curl -o ~/.claude/hooks/open_links.py https://raw.githubusercontent.com/dani-interappy/hook-open/main/open_links.py
 chmod +x ~/.claude/hooks/open_links.py
 ```
 
