@@ -1,4 +1,4 @@
-# claude-code-open-links
+# claude-code-hook-open
 
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) hook that automatically opens URLs in your browser and reveals file paths in Finder whenever Claude mentions them in a response.
 
